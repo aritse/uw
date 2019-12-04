@@ -1,3 +1,3 @@
 # uw
-UW Boot Camp
+## UW Boot Camp
 This repository contains my homework assignment for Full Stack.
