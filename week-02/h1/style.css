@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+#password {
+  border: 2px solid navy;
+}
+
+#copy:disabled,
+#copy.disabled {
+  color: #fff;
+  border-color: #a0a0a0;
+  background-color: #a0a0a0;
+}
+#copy:disabled:hover,
+#copy:disabled:focus,
+#copy.disabled:hover,
+#copy.disabled:focus {
+  color: #fff;
+  border-color: #a0a0a0;
+  background-color: #a0a0a0;
+}
+
+#password {
+  margin: auto;
+}
