@@ -6,21 +6,58 @@ h1 {
   border: 2px solid navy;
 }
 
-#copy:disabled,
-#copy.disabled {
-  color: #fff;
-  border-color: #a0a0a0;
-  background-color: #a0a0a0;
-}
-#copy:disabled:hover,
-#copy:disabled:focus,
-#copy.disabled:hover,
-#copy.disabled:focus {
-  color: #fff;
-  border-color: #a0a0a0;
-  background-color: #a0a0a0;
+#generate {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
 }
 
-#password {
+#copy {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+#copy:disabled {
+  background-color: #a0a0a0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+#copy:disabled:hover,
+#copy:disabled:focus {
+  background-color: #a0a0a0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+textarea {
+  font-size: x-large;
+  width: 50%;
+  height: 100px;
   margin: auto;
 }
