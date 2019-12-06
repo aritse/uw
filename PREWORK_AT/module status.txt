@@ -2,7 +2,7 @@ module 1 - done
 module 2 - done
 module 3 - done
 
-module 4
+module 4 - done
 module 5
 module 6
 
