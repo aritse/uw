@@ -1,0 +1,26 @@
+#top {
+  color: orange;
+}
+
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: slategray;
+}
+
+.styledImage {
+  border-color: pink;
+  border-style: solid;
+  border-width: thick;
+}
+
+#caption {
+  text-align: center;
+}
+
+.video {
+  display: block;
+  margin: auto;
+}
