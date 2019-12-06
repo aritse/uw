@@ -3,8 +3,8 @@ module 2 - done
 module 3 - done
 
 module 4 - done
-module 5
-module 6
+module 5 - done
+module 6 - done
 
 module 7
 module 8
