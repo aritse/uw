@@ -58,7 +58,9 @@ function loadQuestion() {
       const choice = question.choices[i];
       const li = document.createElement("li");
       const button = document.createElement("button");
+      button.setAttribute("class", "choice-button");
       button.textContent = choice;
+      li.setAttribute("class", "choice-li");
       li.appendChild(button);
       choices.appendChild(li);
     }
