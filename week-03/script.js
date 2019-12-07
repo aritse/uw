@@ -1,5 +1,5 @@
 const questions = [
-  { title: "0+1", choices: ["9", "2", "3", "4"], answer: "1" },
+  { title: "0+1", choices: ["9", "1", "3", "4"], answer: "1" },
   { title: "0+2", choices: ["6", "2", "4"], answer: "2" },
   { title: "0+3", choices: ["8", "2", "3", "4"], answer: "3" },
   { title: "0+4", choices: ["0", "2", "3", "4"], answer: "4" },
@@ -14,28 +14,36 @@ const questions = [
 
 const secPerQuestion = 15;
 const numOfQuestions = questions.length;
-var secondsLeft = numOfQuestions * secPerQuestion;
-var questionIndex = 0;
+var secondsLeft;
+var questionIndex;
 
 // DOM elements
 const timerDisplay = document.querySelector("#timer-display");
 const questionNumber = document.querySelector("#question-number");
+const student = document.querySelector("#student-id");
 const startButton = document.querySelector("#start-button");
 const questionDiv = document.querySelector("#question-div");
 const questionTitle = document.querySelector("#question-title");
 const choices = document.querySelector("#choices");
 const answerStatus = document.querySelector("#answer-status");
-
 var correctAnswer;
-var totalScore = 0;
-var numberOfCorrect = 0;
+var totalScore;
+var numberOfCorrect;
 var interval;
+var studentId;
 
 startButton.addEventListener("click", startQuiz);
 questionDiv.addEventListener("click", nextQuestion);
 
-function startQuiz() {
+function startQuiz(event) {
+  secondsLeft = numOfQuestions * secPerQuestion;
+  questionIndex = 0;
+  totalScore = 0;
+  numberOfCorrect = 0;
+  event.preventDefault();
+  studentId = student.value;
   startButton.style.visibility = "hidden";
+  student.style.visibility = "hidden";
   loadQuestion();
   interval = setInterval(countDown, 1000);
 }
@@ -83,16 +91,19 @@ function countDown() {
   }
 
   if (secondsLeft <= 0) {
-    clearInterval(interval);
     doneQuiz();
   }
 }
 
-function calculateScore(numberOfCorrect, counter) {
+function calculateScore() {
   return numberOfCorrect === 0 ? 0 : numberOfCorrect * secPerQuestion + secondsLeft;
 }
 
 function doneQuiz() {
+  clearInterval(interval);
   totalScore = calculateScore();
-  alert("Completed the quiz. Correct: " + numberOfCorrect + " Score: " + totalScore);
+  alert("Student #" + studentId + " scored " + totalScore + ". Correct: " + numberOfCorrect);
+  localStorage.setItem(studentId, totalScore);
+  student.style.visibility = "visible";
+  startButton.style.visibility = "visible";
 }
